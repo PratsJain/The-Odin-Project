@@ -1,0 +1,41 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    background-color: cadetblue;
+    border-radius: 5px;
+    /* width: 400px; */
+
+}
+
+.score {
+    display: flex;
+}
+
+button {
+    border-radius: 10px;
+    flex: 1;
+}
+
+.play {
+    background-color: orange;
+    color: aliceblue;
+}
+
+.option {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
