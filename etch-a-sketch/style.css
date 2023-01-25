@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.grid {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 960px;
+    /* height: 960px; */
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: bisque;
+}
