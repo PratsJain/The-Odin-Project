@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -70,7 +71,8 @@
                             <!-- <span>Name: </span> -->
                             <!-- <strong><span aria-label="required">*</span></strong> -->
                         </label>
-                        <input type="password" id="pass" name="password" required />
+                        <input class="error" type="password" id="pass" name="password" required />
+                        <span></span>
                     </div>
                     <div>
                         <label for="confirm">
@@ -78,7 +80,7 @@
                             <!-- <span>Name: </span> -->
                             <!-- <strong><span aria-label="required">*</span></strong> -->
                         </label>
-                        <input type="password" id="confirm" name="confirm" required />
+                        <input class="error" type="password" id="confirm" name="confirm" required />
                     </div>
                 </div>
             </section>

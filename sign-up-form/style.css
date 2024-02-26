@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
     font-family: Roboto, sans-serif;
     display: flex;
     /* flex-direction: column; */
@@ -17,11 +17,11 @@ body {
 .sidebar {
     /* flex: 1; */
     position: relative;
-    width: 500px;
+    /* width: 500px; */
     /* height: 100vh; */
     padding: 0;
     margin: 0;
-    flex: 0 0 auto;
+    flex: 0 0.5 500px;
     /* background-color: aqua; */
 }
 
@@ -73,27 +73,29 @@ body {
     /* height: 100vh; */
     /* padding: 50px; */
     margin: 0;
-    flex: 1 1 auto;
+    flex: 0.5 1 calc(100vw - 500px);
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     gap: 20px;
 }
 
 .intro {
     font-size: 25px;
     font-weight: bold;
+    color: rgb(56, 56, 56);
     padding: 30px;
     padding-right: 200px;
 }
 
+
+
 section {
     background-color: white;
-    width: 100%;
-    padding: 10px 40px 20px 30px;
-    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    /* width: 100%; */
+    padding: 30px;
+    box-shadow: 0px 2px 0px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -105,6 +107,13 @@ section {
     /* justify-content: space-between; */
 }
 
+.widget>div {
+    /* width: 250px; */
+    flex: 0 1 250px;
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: row wrap; */
+}
 
 label,
 input {
@@ -113,7 +122,7 @@ input {
     font-size: 70%;
     margin: 0;
     box-sizing: border-box;
-    width: 300px;
+    width: 100%;
     /* padding: 5px; */
     height: 25px;
 }
@@ -124,11 +133,69 @@ label {
     height: auto;
 }
 
+input {
+    appearance: none;
+    border: 1px solid silver;
+    border-radius: 4px;
+}
+
+input:hover {
+    background-color: aliceblue;
+}
+
+input:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: 1px solid rgb(11, 115, 206);
+    box-shadow: 2px 3px 0px 0px rgba(107, 107, 107, 0.2);
+}
+
+.error {
+    border: 1px solid red;
+}
+
+input+span {
+    position: relative;
+}
+
+
+input+span::before {
+
+    position: absolute;
+
+    left: 0px;
+    top: 5px;
+}
+
+.error+span::before {
+    font-size: 0.6rem;
+    font-weight: bold;
+    content: "*Passwords do not match";
+    color: red;
+}
+
+.no-error+span::before {
+    font-size: 0.6rem;
+    font-weight: bold;
+    content: "*Passwords match!";
+    color: green;
+}
+
+.no-error {
+    border: 1px solid green;
+}
+
 button {
-    width: 250px;
+    appearance: none;
+    width: 220px;
     height: 2rem;
     margin-top: 20px;
     margin-left: 30px;
+    border-radius: 5px;
+    background-color: #596D48;
+    color: white;
+    outline: none;
+    box-shadow: none;
     /* padding-top: 50px; */
 }
 
