@@ -19,6 +19,7 @@ function createGrid(num) {
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
             pixel.style.backgroundColor = `rgb( ${r}, ${g}, ${b})`;
+            // pixel.style.backgroundColor = `white`;
         })
     });
 }
