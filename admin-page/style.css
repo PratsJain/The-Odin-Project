@@ -2,7 +2,7 @@ body {
     height: 100vh;
     margin: 0;
     /* padding: 10px; */
-    font-family: Roboto, sans-serif;
+    font-family: Helvetica, sans-serif, sans-serif;
     box-sizing: border-box;
     font-size: 15px;
 }
@@ -83,7 +83,7 @@ img[alt="Dashboard"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 300px;
+    /* gap: 300px; */
 }
 
 .search {
@@ -97,10 +97,11 @@ img[alt="Dashboard"] {
     width: 400px;
     height: 30px;
     border-radius: 30px;
-    background-color: #22d3ee;
+    background-color: #0891b2;
 }
 
-.pro-pic {
+.pro-pic,
+.trending-propic {
     height: 40px;
     width: 40px;
 }
@@ -164,8 +165,8 @@ img[alt="Dashboard"] {
     border-radius: 40px;
     font-size: 16px;
     background-color: #0891b2;
-    width: 100px;
-    height: 40px;
+    width: 90px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +184,7 @@ img[alt="Dashboard"] {
     grid-template-rows: 40px auto;
     padding: 20px;
     padding-top: 0px;
-    gap: 12px;
+    gap: 20px;
 }
 
 .project-heading {
@@ -211,17 +212,23 @@ img[alt="Dashboard"] {
     align-content: start;
 }
 
-.project-card {
+.project-card,
+.announce-container,
+.trending-container {
     display: flex;
     padding: 20px;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     border-radius: 5px;
-    height: 125px;
     gap: 10px;
     background-color: white;
-    position: relative;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.project-card {
+    height: 125px;
+    justify-content: flex-start;
+    position: relative;
     border-left: #0891b2 5px solid;
 }
 
@@ -255,5 +262,31 @@ img[alt="Dashboard"] {
 .rightbar {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: orange;
+    display: grid;
+    grid-template-rows: 1fr 0.09fr 1fr;
+    gap: 20px;
+}
+
+.trending {
+    font-weight: bold;
+}
+
+.announce-container,
+.trending-container {
+    font-size: 12px;
+}
+
+
+.announce-heading {
+    font-weight: bold;
+}
+
+.trending-card {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.trend-handle {
+    font-weight: 600;
 }
