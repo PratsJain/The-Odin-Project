@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     margin: 0;
-    overflow: scroll;
+    overflow: auto;
     font-family: Roboto, sans-serif;
     display: flex;
     /* flex-direction: column; */
