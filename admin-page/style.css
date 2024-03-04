@@ -1,0 +1,156 @@
+body {
+    height: 100vh;
+    margin: 0;
+    /* padding: 10px; */
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    background-color: green;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1.4fr 5fr;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-color: #0891b2;
+    display: grid;
+    padding: 10px;
+    padding-top: 20px;
+    grid-template-columns: 30px auto;
+    grid-template-rows: minmax(30px, 1.5fr) repeat(18, minmax(20px, 1fr));
+    gap: 5px;
+    align-items: center;
+    /* repeat(3, minmax(10px, 1fr)); */
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar>div {
+    font-weight: bold;
+    color: white;
+}
+
+.dash {
+    font-size: 20px;
+    align-self: center;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+
+.headericon {
+    height: 30px;
+    width: 30px;
+    filter: invert(0);
+}
+
+img[alt="Dashboard"] {
+    height: 30px;
+    width: 30px;
+}
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: #cffafe;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+    padding: 10px;
+    /* justify-items: center; */
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.primary {
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 300px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.searchbar {
+    width: 400px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #22d3ee;
+}
+
+.pro-pic {
+    height: 40px;
+    width: 40px;
+}
+
+.profile-pic-big {
+    height: 70px;
+    width: 70px;
+}
+
+.notif {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-handle {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.second {
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 300px;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 0px;
+
+}
+
+.content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: #ecfeff;
+    box-shadow: 0px 5px 2px 0px #4314072f inset;
+}
