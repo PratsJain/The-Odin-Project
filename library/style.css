@@ -102,9 +102,9 @@ ul {
     font-weight: bold;
 }
 
-.book-info {
+/* .book-info {
     font-size: 14px;
-}
+} */
 
 
 .book-button {
@@ -119,6 +119,7 @@ ul {
     outline: none;
     /* box-shadow: 3px 3px 3px 0px rgba(107, 107, 107, 0.2); */
     border: 1px solid black;
+    cursor: pointer;
     /* padding-top: 50px; */
 }
 
@@ -243,5 +244,6 @@ label+input[type="radio"]:checked {
     font-weight: bold;
     outline: none;
     box-shadow: none;
+    cursor: pointer;
     /* padding-top: 50px; */
 }
