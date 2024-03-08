@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <form action="" method="post" class="play-form">
+                <div class="form-head">Player Details</div>
+                <div class="widget">
+                    <label for="p1-name">P1 Name:</label>
+                    <input type="text" name="p1-name" id="p1-name" required>
+                </div>
+                <div class="widget">
+                    <label for="p2-name">P2 Name:</label>
+                    <input type="text" name="p2-name" id="p2-name" required>
+                </div>
+                <button type="submit" class="play-button">
+                    <div>New Game</div>
+                </button>
+            </form>
+        </div>
+        <div class="header">
+            <p class="heading">Tic-Tac-Toe</p>
+        </div>
+        <div class="playground">
+            <div class="board-box winner">O</div>
+            <div class="board-box">X</div>
+            <div class="board-box">X</div>
+            <div class="board-box">X</div>
+            <div class="board-box winner">O</div>
+            <div class="board-box">X</div>
+            <div class="board-box">X</div>
+            <div class="board-box">X</div>
+            <div class="board-box winner">O</div>
+            <div class="output-window">Fill the form on the left to start.</div>
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
