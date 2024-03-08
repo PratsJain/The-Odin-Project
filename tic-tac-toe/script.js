@@ -161,6 +161,7 @@ function gameController() {
 
 screenControl = (function ScreenController() {
     const game = gameController();
+    let active = false;
     const renderBoard = (() => {
         const playground = document.querySelector(".playground");
         for (let i = 0; i < 9; ++i) {
@@ -185,6 +186,7 @@ screenControl = (function ScreenController() {
     const setoutput = (out) => {
         document.querySelector(".output-window").textContent = out;
     };
+
     document.querySelector(".play-form").addEventListener('submit', (event) => {
         event.preventDefault();
         p1name = document.querySelector("#p1-name").value
@@ -192,6 +194,10 @@ screenControl = (function ScreenController() {
         game.newGame(p1name, p2name);
         updateBoard();
         setoutput(`${game.getTurnName()}'s turn!`);
+        if (!active) {
+            playgame();
+        }
+        active = true;
     });
 
     document.querySelector(".reset").addEventListener("click", (event) => {
@@ -200,26 +206,29 @@ screenControl = (function ScreenController() {
         setoutput(`${game.getTurnName()}'s turn!`);
     });
 
-    document.querySelectorAll(".board-box").forEach(
-        (element) => {
-            element.addEventListener("click", (event) => {
-                if (game.getStatus() === 0) {
-                    const val = parseInt(event.target.id.split("-")[1]);
-                    // console.log(`Box hit: ${val}`);
-                    game.playRound(val);
-                    event.target.textContent = game.getBoard()[Math.trunc((val - 1) / 3)][(val - 1) % 3].getval();
+    const playgame = () => {
+        document.querySelectorAll(".board-box").forEach(
+            (element) => {
+                element.addEventListener("click", (event) => {
                     if (game.getStatus() === 0) {
-                        setoutput(`${game.getTurnName()}'s turn!`);
+                        const val = parseInt(event.target.id.split("-")[1]);
+                        console.log(`Box hit: ${val}`);
+                        game.playRound(val);
+                        event.target.textContent = game.getBoard()[Math.trunc((val - 1) / 3)][(val - 1) % 3].getval();
+                        if (game.getStatus() === 0) {
+                            setoutput(`${game.getTurnName()}'s turn!`);
+                        }
+                        else if (game.getStatus() === 1) {
+                            setoutput("It's a Draw!");
+                        }
+                        else {
+                            setoutput(`${game.getWinner()} won!`);
+                            updateBoard();
+                        }
                     }
-                    else if (game.getStatus() === 1) {
-                        setoutput("It's a Draw!");
-                    }
-                    else {
-                        setoutput(`${game.getWinner()} won!`);
-                        updateBoard();
-                    }
-                }
-            });
-        }
-    );
+                });
+            }
+        );
+    };
 })();
+
