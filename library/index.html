@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <form action="" method="post">
+                <div class="form-head">Add Book</div>
+                <div class="widget">
+                    <label for="book-name">Title:</label>
+                    <input type="text" name="book-name" id="book-name">
+                </div>
+                <div class="widget">
+                    <label for="book-author">Author:</label>
+                    <input type="text" name="book-author" id="book-author">
+                </div>
+                <div class="widget">
+                    <label for="book-pages">Pages:</label>
+                    <input type="number" name="book-pages" id="book-pages">
+                </div>
+                <div class="radio-inp">
+                    <p class="book-status-head">Status:</p>
+                    <ul>
+                        <li>
+                            <label for="book-read">Read</label>
+                            <input type="radio" name="book-status" id="book-read" value="Read" checked>
+                        </li>
+                        <li>
+                            <label for="book-unread">Unread</label>
+                            <input type="radio" name="book-status" id="book-unread" value="Unread">
+                        </li>
+                    </ul>
+                </div>
+                <button type="submit" class="form-button">
+                    <div>Add</div>
+                </button>
+            </form>
+        </div>
+        <div class="header">
+            <p class="heading">My Library</p>
+        </div>
+        <div class="shelf">
+            <div class="book-card">
+                <p class="book-title">The Hobbit</p>
+                <p class="book-info">Author: J.R.R Tolkien<br>Pages: 10<br> Status: Read</p>
+                <div class="book-actions"><button class="book-button status">Unread</button><button
+                        class="book-button delete">Delete</button></div>
+            </div>
+            <div class="book-card">
+                <p class="book-title">The Hobbit</p>
+                <p class="book-info">Author: J.R.R Tolkien<br>Pages: 10<br> Status: Read</p>
+                <div class="book-actions"><button class="book-button">Unread</button><button
+                        class="book-button">Delete</button></div>
+            </div>
+            <div class="book-card">
+                <p class="book-title">The Hobbit</p>
+                <p class="book-info">Author: J.R.R Tolkien<br>Pages: 10<br> Status: Read</p>
+                <div class="book-actions"><button class="book-button">Unread</button><button
+                        class="book-button">Delete</button></div>
+            </div>
+            <div class="book-card">
+                <p class="book-title">The Hobbit</p>
+                <p class="book-info">Author: J.R.R Tolkien<br>Pages: 10<br> Status: Read</p>
+                <div class="book-actions"><button class="book-button">Unread</button><button
+                        class="book-button">Delete</button></div>
+            </div>
+            <div class="book-card">
+                <p class="book-title">The Hobbit</p>
+                <p class="book-info">Author: J.R.R Tolkien<br>Pages: 10<br> Status: Read</p>
+                <div class="book-actions"><button class="book-button">Unread</button><button
+                        class="book-button">Delete</button></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
