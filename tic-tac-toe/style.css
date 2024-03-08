@@ -61,7 +61,7 @@ p {
     align-content: center;
     background-color: #ecfeff;
     box-shadow: 0px 5px 2px 0px #4314072f inset;
-    padding: 20px;
+    padding: 60px;
     /* padding-top: 0px; */
     /* gap: 20px; */
 }
@@ -78,7 +78,17 @@ p {
     font-size: 60px;
     color: #0e7490;
     font-weight: bold;
+    outline: none;
+    border: none;
     /* height: 125px; */
+}
+
+.board-box:focus {
+    outline: 2px solid #0e7490;
+}
+
+.board-box:hover {
+    background-color: #cffafe;
 }
 
 .winner {
@@ -161,6 +171,14 @@ input:focus {
     box-shadow: none;
     cursor: pointer;
     /* padding-top: 50px; */
+}
+
+.play-button:focus {
+    border: 2px solid #0e7490;
+}
+
+.reset:focus {
+    border: 2px solid #06b6d4;
 }
 
 .reset {
